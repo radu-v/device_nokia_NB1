@@ -323,7 +323,6 @@ PRODUCT_PACKAGES += \
     init.qcom.wifi.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
-    init.qti.qseecomd.sh \
     wifisar.sh \
     fqcaudioloopback_run.sh \
     init.fih.fqcaudio.rc \
