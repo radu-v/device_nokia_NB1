@@ -412,10 +412,7 @@ on post-fs-data
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0600 system drmrpc
-
-    #Start move time data to /data/vendor once post-fs-data done
-    start vendor.move_time_data
-
+    
     #+FIH@R3J168: FEATURE_FIH_C_NOKIA_001 (8998), by Pupu
     # Create NOKIA mcfg related dirs
     mkdir /data/vendor/fih_atl 2770 system root
@@ -1183,13 +1180,6 @@ service seemp_healthd /vendor/bin/seemp_healthd
 
 service power_off_alarm /vendor/bin/power_off_alarm
     class core
-    group system
-    disabled
-    oneshot
-
-service vendor.move_time_data /system/bin/move_time_data.sh
-    class main
-    user system
     group system
     disabled
     oneshot
