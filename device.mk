@@ -326,6 +326,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0 \
     android.hardware.radio.config@1.0 \
+    rild \
+    libxml2 \
     librmnetctl
 
 # RenderScript HAL
