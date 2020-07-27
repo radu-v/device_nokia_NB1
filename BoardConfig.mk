@@ -70,4 +70,5 @@ BOARD_USES_QCOM_HARDWARE := true
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
+# Inherit the proprietary files
 -include vendor/nokia/NB1/BoardConfigVendor.mk
