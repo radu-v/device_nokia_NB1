@@ -214,6 +214,18 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.1-service \
+    NfcNci \
+    Tag \
+    SecureElement \
+    android.hardware.secure_element@1.0-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
