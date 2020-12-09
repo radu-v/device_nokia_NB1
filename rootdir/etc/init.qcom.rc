@@ -1009,7 +1009,6 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     user system
     group system
 
-
 service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
@@ -1131,6 +1130,9 @@ on property:vendor.rild.libpath=*
 
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
+
+on property:vendor.netflix.bsp_rev=*
+    setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
 
 service seemp_healthd /vendor/bin/seemp_healthd
     class late_start
